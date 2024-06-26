@@ -1,0 +1,2 @@
+php artisan serve: chạy server
+php artisan make:controller UserController: tạo controller
