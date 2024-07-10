@@ -29,3 +29,17 @@ Route::get('/update-user', [UserController::class, 'updateUser']);
 //lab 1
 Route::get('/thongtinsv', [SinhVienController::class, 'viewSinhVien']);
 
+// group
+// http://127.0.0.1:8000/user/list-users
+
+Route::group(['prefix' => 'users', 'as' => 'users.'], function(){
+    Route::get('list-users', [UserController::class, 'listUsers'])->name('listusers');
+    Route::get('add-users', [UserController::class, 'addUsers'])->name('addusers');
+
+    Route::post('add-users', [UserController::class, 'addPostUsers'])->name('addpostusers');
+
+    
+    Route::get('delete-user/{idUser}', [UserController::class, 'deleteUser'])->name('deleteuser');
+    Route::get('update-user/{idUser}', [UserController::class, 'getUser'])->name('getuser');
+    Route::post('update-users', [UserController::class, 'updatePostUser'])->name('updatepostuser');
+});

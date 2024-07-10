@@ -1,0 +1,11 @@
+select (column | *) from tablename
+    where
+    orderby (asc | desc)
+    groupBy
+    having
+
+insert into tableName values ('')
+update tableName set fieldName = 'value'
+delete from tableName where 
+
+đổi timezone ở config/app
