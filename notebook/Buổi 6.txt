@@ -1,0 +1,25 @@
+##xuất dữ liệu (vd <h2>)
+{{ $variable }}: XXS (cross-site scripting) (không chạy h2)
+{!! $variable !!}: không chống xss (chạy h2)
+
+@if @elseif @endif
+ @switch()
+    @case()
+        html
+        @break
+    @default
+        html
+ @endswitch
+ 
+
+#nạp view con
+    @include('viewCon', ['var1'=>'abcdej nigga'])
+
+#kế thừa 
+    @extends
+    @yield('content')
+    @section('content')
+    @endsection (hoặc @stop)
+
+    @parent
+    

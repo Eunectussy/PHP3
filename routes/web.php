@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController; //import
 use App\Http\Controllers\SinhVienController;
+use App\Http\Controllers\ProductController;
 
 //GET POST => Method HTTP
 
@@ -42,4 +43,15 @@ Route::group(['prefix' => 'users', 'as' => 'users.'], function(){
     Route::get('delete-user/{idUser}', [UserController::class, 'deleteUser'])->name('deleteuser');
     Route::get('update-user/{idUser}', [UserController::class, 'getUser'])->name('getuser');
     Route::post('update-users', [UserController::class, 'updatePostUser'])->name('updatepostuser');
+});
+
+Route::group(['prefix' => 'products', 'as' => 'products.'], function(){
+    Route::get('list-products', [ProductController::class, 'listProducts'])->name('listproduct');
+    Route::get('add-products', [ProductController::class, 'addProducts'])->name('addproducts');
+    Route::get('delete-products/{idPro}', [ProductController::class, 'deleteProduct'])->name('deleteproduct');
+    Route::get('update-products/{idPro}', [ProductController::class, 'updateProduct'])->name('updateproduct');
+    Route::post('add-products', [ProductController::class, 'addPostProducts'])->name('addpostproducts');
+    Route::post('update-products', [ProductController::class, 'updatePostProduct'])->name('updatepostproduct'); 
+    Route::get('search-products', [ProductController::class, 'searchProduct'])->name('searchproducts');
+
 });
