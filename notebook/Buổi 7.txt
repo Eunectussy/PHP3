@@ -1,0 +1,11 @@
+php artisan make:migration create_product_table
+
+php artisan make:migration create_product_comment_table
+
+php artisan migrate
+
+php artisan make:migration update_product_table
+
+php artisan migrate:rollback
+
+php artisan migrate:reset

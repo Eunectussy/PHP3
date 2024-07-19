@@ -76,4 +76,8 @@ class ProductController extends Controller
         ]);
 
     }
+
+    public function test(){
+        return view('admin/products/list-product');
+    }
 }

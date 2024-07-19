@@ -55,3 +55,7 @@ Route::group(['prefix' => 'products', 'as' => 'products.'], function(){
     Route::get('search-products', [ProductController::class, 'searchProduct'])->name('searchproducts');
 
 });
+// Route::get('/admin', function () {
+//     return view('admin/products/list-product');
+// });
+Route::get('/test', [ProductController::class, 'test']);

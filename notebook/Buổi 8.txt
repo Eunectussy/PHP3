@@ -1,0 +1,11 @@
+php artisan make:seeder UsersSeeder
+
+php artisan db:seed
+
+php artisan db:seed --class=UsersSeeder    
+
+php artisan make:model Product
+
+php artisan make:seeder ProductSeeder
+
+php artisan make:factory Product

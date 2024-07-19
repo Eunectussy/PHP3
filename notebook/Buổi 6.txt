@@ -23,3 +23,5 @@
 
     @parent
     
+
+asset để trong public
